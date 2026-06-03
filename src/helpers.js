@@ -20,3 +20,8 @@ export function findIndex(lista, id){
   const index = lista.findIndex(tarefa => tarefa.id === Number(id));
   return index;
 }
+
+export function filtraTarefasPorStatus(lista, status){
+  const tarefasFiltradas = lista.filter(item => item.status === status);
+  return tarefasFiltradas;
+}

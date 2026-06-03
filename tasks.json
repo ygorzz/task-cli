@@ -2,8 +2,22 @@
   {
     "id": 1,
     "description": "estudar",
-    "status": "done",
+    "status": "todo",
     "createdAt": "02/06/2026, 21:48:45",
-    "updatedAt": "02/06/2026, 21:58:57"
+    "updatedAt": "03/06/2026, 08:10:53"
+  },
+  {
+    "id": 2,
+    "description": "ler",
+    "status": "done",
+    "createdAt": "03/06/2026, 07:58:02",
+    "updatedAt": "03/06/2026, 07:58:25"
+  },
+  {
+    "id": 3,
+    "description": "comer",
+    "status": "done",
+    "createdAt": "03/06/2026, 07:58:10",
+    "updatedAt": "03/06/2026, 07:58:29"
   }
 ]
