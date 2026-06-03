@@ -2,7 +2,7 @@
 import { Command } from "commander";
 import addTask from "./commands/add.js";
 import listTasks from "./commands/list.js";
-import handleErrors from "./erro/handleErrors.js";
+import handleErrors from "./error/handleErrors.js";
 import updateTask from "./commands/update.js";
 import deleteTask from "./commands/delete.js";
 import markInProgress from "./commands/markInProgress.js";

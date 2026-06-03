@@ -1,4 +1,4 @@
-import Error404 from "../erro/Error404.js";
+import Error404 from "../error/Error404.js";
 import { findIndex, verifyIndex } from "../helpers.js";
 import { add, list} from "../storage.js";
 
