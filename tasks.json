@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "description": "estudar",
+    "status": "done",
+    "createdAt": "02/06/2026, 21:48:45",
+    "updatedAt": "02/06/2026, 21:58:57"
+  }
+]

@@ -5,6 +5,8 @@ import listaTarefas from "./commands/list.js";
 import trataErros from "./erro/trataErros.js";
 import atualizaTarefa from "./commands/update.js";
 import removeTarefa from "./commands/delete.js";
+import marcaEmProgresso from "./commands/markInProgress.js";
+import marcaComoConcluida from "./commands/markDone.js";
 
 const program = new Command();
 
@@ -49,6 +51,20 @@ program
   .argument("<id>")
   .action( async (id) => {
     await removeTarefa(id);
+  });
+
+program
+  .command("mark-in-progress")
+  .argument("<id>")
+  .action( async (id) => {
+    await marcaEmProgresso(id);
+  });
+
+program
+  .command("mark-done")
+  .argument("<id>")
+  .action(async (id) => {
+    await marcaComoConcluida(id);
   });
 
 program.parseAsync();
