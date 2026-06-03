@@ -21,6 +21,11 @@ export function findIndex(list, id){
   return index;
 }
 
+export function verifyIndex(index){
+  const result = index === -1 ? false : true;
+  return result;
+}
+
 export function filterTaskByStatus(list, status){
   const filteredTasks = list.filter(item => item.status === status);
   return filteredTasks;
