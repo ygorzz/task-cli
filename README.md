@@ -59,7 +59,9 @@ task-cli/
 | `list-done` | Lista tarefas concluídas |
 | `update` | Atualiza a descrição de uma tarefa |
 | `delete` | Remove uma tarefa |
-| `mark-*` | Atualiza o status de uma tarefa |
+| `mark-in-progress` | Atualiza o status de uma tarefa |
+| `mark-done` | Atualiza o status de uma tarefa |
+| `mark-todo` | Atualiza o status de uma tarefa |
 
 ### Adicionar tarefa
 
