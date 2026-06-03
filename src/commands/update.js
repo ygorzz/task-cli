@@ -1,13 +1,15 @@
-import listaTarefas from "./list.js";
-import {add} from "../storage.js";
-import { findIndex } from "../helpers.js";
+import {add, list} from "../storage.js";
+import { findIndex, verifyIndex } from "../helpers.js";
+import Error404 from "../erro/Error404.js";
 
-export default async function atualizaTarefa(id, descricao){
+export default async function updateTask(id, description){
   const date = new Date().toLocaleString();
-  const tarefas = await listaTarefas();
-  const index = findIndex(tarefas, id);
-  tarefas[index].description = descricao;
-  tarefas[index].updatedAt = date;
-  await add(tarefas, id);
-  console.log("Tarefa atualizada com sucesso!");
+  const tasks = await list();
+  const index = findIndex(tasks, id);
+  if(!verifyIndex(index)){
+    throw new Error404();
+  }
+  tasks[index].description = description;
+  tasks[index].updatedAt = date;
+  await add(tasks, id);
 }

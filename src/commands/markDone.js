@@ -1,13 +1,15 @@
-import { findIndex } from "../helpers.js";
-import { add } from "../storage.js";
-import listaTarefas from "./list.js";
+import Error404 from "../erro/Error404.js";
+import { findIndex, verifyIndex } from "../helpers.js";
+import { add, list} from "../storage.js";
 
-export default async function marcaComoConcluida(id) {
+export default async function markDone(id) {
   const date = new Date().toLocaleString();
-  const tarefas = await listaTarefas();
-  const index = findIndex(tarefas, id);
-  tarefas[index].status = "done";
-  tarefas[index].updatedAt = date;
-  await add(tarefas, id);
-  console.log("Tarefas marcada como 'done'.");
+  const tasks = await list();
+  const index = findIndex(tasks, id);
+  if(!verifyIndex(index)){
+    throw new Error404();
+  }
+  tasks[index].status = "done";
+  tasks[index].updatedAt = date;
+  await add(tasks, id);
 }
