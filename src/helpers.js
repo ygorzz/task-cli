@@ -15,3 +15,8 @@ export function montaObjetoTarefa(descricao, listaTarefas){
 export async function verificaSeJsonEstaCriado(filePath){
   if(!fs.existsSync(filePath)) await fs.promises.writeFile(filePath, JSON.stringify([]));
 }
+
+export function findIndex(lista, id){
+  const index = lista.findIndex(tarefa => tarefa.id === Number(id));
+  return index;
+}
