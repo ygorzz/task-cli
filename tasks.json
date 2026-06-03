@@ -1,23 +1,16 @@
 [
   {
     "id": 1,
-    "description": "estudar",
+    "description": "estudar node",
     "status": "todo",
-    "createdAt": "02/06/2026, 21:48:45",
-    "updatedAt": "03/06/2026, 08:10:53"
+    "createdAt": "03/06/2026, 08:45:28",
+    "updatedAt": "03/06/2026, 08:46:44"
   },
   {
     "id": 2,
-    "description": "ler",
-    "status": "done",
-    "createdAt": "03/06/2026, 07:58:02",
-    "updatedAt": "03/06/2026, 07:58:25"
-  },
-  {
-    "id": 3,
-    "description": "comer",
-    "status": "done",
-    "createdAt": "03/06/2026, 07:58:10",
-    "updatedAt": "03/06/2026, 07:58:29"
+    "description": "estudar",
+    "status": "in progress",
+    "createdAt": "03/06/2026, 08:46:35",
+    "updatedAt": "03/06/2026, 08:46:55"
   }
 ]

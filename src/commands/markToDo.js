@@ -1,11 +1,11 @@
 import { findIndex } from "../helpers.js";
 import { add, list } from "../storage.js";
 
-export default async function marcaToDo(id){
+export default async function markToDo(id){
   const date = new Date().toLocaleString();
-  const tarefas = await list();
-  const index = findIndex(tarefas, id);
-  tarefas[index].status = "todo";
-  tarefas[index].updatedAt = date;
-  await add(tarefas, id);
+  const tasks = await list();
+  const index = findIndex(tasks, id);
+  tasks[index].status = "todo";
+  tasks[index].updatedAt = date;
+  await add(tasks, id);
 }

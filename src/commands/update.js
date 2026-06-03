@@ -1,11 +1,11 @@
 import {add, list} from "../storage.js";
 import { findIndex } from "../helpers.js";
 
-export default async function atualizaTarefa(id, descricao){
+export default async function updateTask(id, description){
   const date = new Date().toLocaleString();
-  const tarefas = await list();
-  const index = findIndex(tarefas, id);
-  tarefas[index].description = descricao;
-  tarefas[index].updatedAt = date;
-  await add(tarefas, id);
+  const tasks = await list();
+  const index = findIndex(tasks, id);
+  tasks[index].description = description;
+  tasks[index].updatedAt = date;
+  await add(tasks, id);
 }
